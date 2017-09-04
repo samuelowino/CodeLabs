@@ -10,7 +10,7 @@ import java.awt.*;
  */
 public class Window extends JFrame{
 
-
+    private static JButton button;
 
     public Window(){
         setSize(700,700);
@@ -21,8 +21,11 @@ public class Window extends JFrame{
         getContentPane().setBackground(Color.white);
         setLayout(null);
 
-        //okay type optionPane
-        JOptionPane.showMessageDialog(null,"Hello World");
+        button = new JButton("Hover over me to see tooltip");
+        button.setToolTipText("You are seing a tooltip text");
+        button.setBounds(20,20,400,50);
+
+        add(button);
 
         repaint();
         setVisible(true);
